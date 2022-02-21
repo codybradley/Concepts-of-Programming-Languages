@@ -1,0 +1,17 @@
+package main
+import (
+	"fmt"
+	"math/rand"
+)
+
+func intRandom1DArray(size int) []int {
+	intArray := make([]int, size)
+	for i := 0; i<size; i++ {
+		intArray[i] = rand.Int()
+	}
+	return intArray
+}
+
+func main() {
+	fmt.Println(intRandom1DArray(5))
+}

@@ -1,0 +1,11 @@
+--Haskell
+fib n x1 x2
+    | n == 1 = x1
+    | otherwise = fib (n-1) x2 (x1+x2)
+
+--generates list of fib numbers 1 to n-1
+fibList n
+    | n < 2 = []
+    | otherwise = [fib x 0 1 | x <- [1..n-1]]
+
+main = print (fibList 8)

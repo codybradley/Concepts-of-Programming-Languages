@@ -1,0 +1,21 @@
+%Facts & Rules
+gFunc(X, G) :-
+	G is 4*X + 5.
+
+listOfG([],[]).
+listOfG([H|T],[H1|T1]) :-
+    gFunc(H, H1),
+    listOfG(T, T1).
+
+%no maxOfG([],0) because empty list has no max
+%so passing an empty list should return false
+maxOfG(L, Max) :-
+    listOfG(L, G),
+    max_list(G, Max).
+%used max_list() instead of recursive max() because too much
+%work to set a flag to use min_integer() for the base case
+
+
+%Queries
+maxOfG([-3,-10,-5],M).
+maxOfG([-2,10,2,10,8],M).

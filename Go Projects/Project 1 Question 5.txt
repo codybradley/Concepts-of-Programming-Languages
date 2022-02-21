@@ -1,0 +1,16 @@
+package main
+
+import (
+	"fmt"
+)
+
+func promptForInput(msg string) string {
+	var input string
+	fmt.Println(msg)
+	fmt.Scanln(&input)
+	return input
+}
+
+func main() {
+	fmt.Println(promptForInput("Input your name: "))
+}

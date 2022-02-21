@@ -1,0 +1,7 @@
+func printString(input: String) {
+    print(input)
+}
+
+let outputString = "lol yeah"
+
+printString(input: outputString);

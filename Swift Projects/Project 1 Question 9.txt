@@ -1,0 +1,16 @@
+func orderedArray(size: Int) -> [Int] {
+    var intArray = [Int]()
+    for i in 0..<size {
+        intArray.append(i)
+    }
+    return intArray
+}
+
+func averageArray(input: [Int]) -> Int {
+    return intArray.reduce(0, +)/intArray.count
+}
+
+var array = [Int]()
+array = orderedArray(size: 10)
+print(array)
+print(averageArray(input: array))

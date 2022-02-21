@@ -1,0 +1,36 @@
+package main
+import (
+	"fmt"
+	"math/rand"
+	"strconv"
+)
+
+func intRandom2DArray(row, col int) [][]int {
+	intArray := make([][]int, row)
+	for i := 0; i<row; i++ {
+		intArray[i] = make([]int, col)
+	}
+	
+	for i := 0; i<row; i++ {
+		for j := 0; j<col; j++ {
+			intArray[i][j] = rand.Intn(100)
+		}
+	}
+	return intArray
+}
+
+func int2DArrayToString(input [][]int) string {
+	finalString := ""
+	for i := 0; i<len(input); i++ {
+		for j := 0; j<len(input[0]); j++ {
+			finalString += " " + strconv.Itoa(input[i][j])
+		}
+	}
+	return finalString
+}
+
+func main() {
+	intArray := intRandom2DArray(3, 5)
+	fmt.Println(intArray)
+	fmt.Println(int2DArrayToString(intArray))
+}

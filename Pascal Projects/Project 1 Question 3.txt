@@ -1,0 +1,29 @@
+program Project1;
+
+type Int2DArray = array of array of integer;
+    
+function intRandom2DArray(row, col: integer): Int2DArray;
+var i, j: integer;
+begin
+    SetLength(intRandom2DArray, row);
+    for i := 0 to row-1 do
+        SetLength(intRandom2DArray[i], col);
+    for i := 0 to row-1 do
+        for j := 0 to col-1 do
+            intRandom2DArray[i][j] := Random(MAXINT);
+end;
+
+procedure output2DArray(intArray: Int2DArray);
+var i, j: integer;
+begin
+    for i := 0 to Length(intArray)-1 do 
+    begin
+        for j := 0 to Length(intArray[0])-1 do
+            write(' ', intArray[i][j]);
+        writeln('');
+    end;
+end;
+
+begin
+  output2DArray(intRandom2DArray(3, 5));
+end.

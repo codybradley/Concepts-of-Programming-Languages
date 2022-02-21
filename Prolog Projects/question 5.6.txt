@@ -1,0 +1,12 @@
+//RULES
+listsum([],0).
+listsum([H|T],N):-
+    listsum(T, X),
+    N is X + H.
+question6([],[]).
+question6([H|T],[S|L]):-
+    listsum([H|T],S),
+    question6(T,L).
+
+//Query
+trace, question6([1,2,3,4,6], X).

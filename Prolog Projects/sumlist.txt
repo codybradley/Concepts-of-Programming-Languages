@@ -1,0 +1,8 @@
+//RULES
+listsum([],0).
+listsum([H|T],N):-
+    listsum(T, X),
+    N is X + H.
+
+//QUERY
+trace, listsum([1,2,3,4,5], X).

@@ -1,0 +1,42 @@
+program Project1;
+uses SysUtils;
+type Int2DArray = array of array of integer;
+var exArray: Int2DArray;
+    
+function intRandom2DArray(row, col: integer): Int2DArray;
+var i, j: integer;
+begin
+    SetLength(intRandom2DArray, row);
+    for i := 0 to row-1 do
+        SetLength(intRandom2DArray[i], col);
+    for i := 0 to row-1 do
+        for j := 0 to col-1 do
+            intRandom2DArray[i][j] := Random(100);
+end;
+
+procedure output2DArray(input: Int2DArray);
+var i, j: integer;
+begin
+    for i := 0 to Length(input)-1 do 
+    begin
+        for j := 0 to Length(input[0])-1 do
+            write(' ', input[i][j]);
+        writeln('');
+    end;
+end;
+
+function int2DArrayToString(input: Int2DArray): string;
+var i, j: integer;
+begin
+    int2DArrayToString := '';
+    for i := 0 to Length(input)-1 do 
+        for j := 0 to Length(input[0])-1 do
+            int2DArrayToString += ' ' + IntToStr(input[i][j]);
+end;
+
+begin
+    exArray := intRandom2DArray(3, 5);
+    output2DArray(exArray);
+    writeln();
+    writeln(int2DArrayToString(exArray));
+end.

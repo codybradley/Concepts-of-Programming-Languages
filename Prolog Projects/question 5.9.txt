@@ -1,0 +1,6 @@
+//RULES
+dup([],[]).
+dup([H|T1],[H,H|T2]):- dup(T1,T2).
+
+//QUERY
+trace, dup([1,2,3,4,6], X).

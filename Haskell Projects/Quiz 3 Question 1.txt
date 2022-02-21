@@ -1,0 +1,5 @@
+--need to pass 1 as second argument D:
+modList [] _ = []
+modList (e:rest) n = (e `mod` n) : modList (rest) (n+1)
+
+main = print (modList [0,3..30] 1)

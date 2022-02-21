@@ -1,0 +1,4 @@
+question1 [] = []
+question1 (e:rest) = sum(e:rest) : question1(rest)
+
+main = print(question1 [1..20])

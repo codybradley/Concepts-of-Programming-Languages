@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+)
+
+func orderedArray(size int) []int {
+	intArray := make([]int, size)
+	for i := 0; i<size; i++ {
+	    intArray[i]=i
+	}
+	return intArray
+}
+
+func main() {
+	fmt.Println(orderedArray(5))
+}

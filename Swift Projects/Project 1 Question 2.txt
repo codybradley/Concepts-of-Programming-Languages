@@ -1,0 +1,9 @@
+func intRandom1DArray(size: Int) -> [Int] {
+    var intArray = [Int]()
+    for _ in 1...size {
+        intArray.append(Int.random(in: 0...Int.max))
+    }
+    return intArray
+}
+
+print(intRandom1DArray(size: 5))

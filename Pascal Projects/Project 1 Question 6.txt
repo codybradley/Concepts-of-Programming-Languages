@@ -1,0 +1,20 @@
+program Project1;
+
+type IntegerArray = array of integer;
+    
+function orderedArray(size: integer): IntegerArray;
+var i: integer;
+begin
+    SetLength(orderedArray, size);
+    for i := 0 to size-1 do orderedArray[i] := i;
+end;
+
+procedure outputArray(intArray: IntegerArray);
+var i: integer;
+begin
+    for i := 0 to Length(intArray)-1 do writeln(intArray[i])
+end;
+
+begin
+  outputArray(intRandom1DArray(5));
+end.

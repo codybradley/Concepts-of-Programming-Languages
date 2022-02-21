@@ -1,0 +1,8 @@
+--Haskell
+--divide element by sum of e from i=1 to n
+--where n is num of els in list
+--(element divided by sum of list)
+divBySum [] = []
+divBySum xs = [x/(sum xs) | x <- xs]
+
+main = print (divBySum [1..10])

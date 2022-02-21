@@ -1,0 +1,7 @@
+func promptForInput(msg: String) -> String {
+    print(msg)
+    let input = readLine()!
+    return input
+}
+
+print(promptForInput(msg: "Type your name: "))

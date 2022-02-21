@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+)
+
+//question prompt has this func return int,
+//even though it should probably return float
+func averageArray(input []int) int {
+	sum := 0
+	for i := 0; i<len(input); i++ {
+		sum += input[i]
+	}
+	return sum/len(input)
+}
+
+func main() {
+    intArray := []int{3, 3, 4, 4, 4}
+	fmt.Println(averageArray(intArray))
+}

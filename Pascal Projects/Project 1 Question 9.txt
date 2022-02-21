@@ -1,0 +1,34 @@
+program Project1;
+
+type IntegerArray = array of integer;
+var exArray: IntegerArray;
+    
+function orderedArray(size: integer): IntegerArray;
+var i: integer;
+begin
+    SetLength(orderedArray, size);
+    for i := 0 to size-1 do orderedArray[i] := i;
+end;
+
+procedure outputArray(input: IntegerArray);
+var i: integer;
+begin
+    for i := 0 to Length(input)-1 do
+        write(' ', input[i]);
+    writeln();
+end;
+
+function averageArray(input: IntegerArray): integer;
+var i: integer;
+begin
+    averageArray := 0;
+    for i := 0 to Length(input)-1 do
+        averageArray += input[i];
+    averageArray := Trunc(averageArray / Length(input));
+end;
+
+begin
+    exArray := orderedArray(8);
+    outputArray(exArray);
+    writeln(averageArray(exArray));
+end.

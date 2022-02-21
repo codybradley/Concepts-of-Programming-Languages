@@ -1,0 +1,27 @@
+%Prompt is conflicting (1 to X or 1 to (X-1))
+%Rules and Facts
+
+fib(0,_,_,[]).
+
+%generates list of fib(1) to fib(x-1)
+fib(X,N1,N2,[H|T]) :-
+	X>0,
+    X1 is X-1,
+    H is N1 + N2,
+    fib(X1,N2,H,T).
+
+runFib(1,[]).
+
+runFib(2,[0]).
+
+%generates list 1 to X-1 and returns
+%list of factorial of each element
+runFib(X,[0,1|F]) :-
+    %X1 is X-2 if you want it to go 1 to X
+    X1 is X-3,
+    fib(X1,0,1,F).
+
+%Queries to test
+runFib(0,L).
+runFib(2,L).
+runFib(8,L).

@@ -1,0 +1,2 @@
+//      https://www.cpp.edu/~jrfisher/www/prolog_tutorial/pt_framer.html
+//      https://www.tutorialspoint.com/prolog/prolog_operators.htm

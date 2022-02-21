@@ -1,0 +1,10 @@
+program Project1;
+
+procedure printString(input: string);
+begin
+    writeln (input)
+end;
+
+begin
+  printString('lol yeah')
+end.

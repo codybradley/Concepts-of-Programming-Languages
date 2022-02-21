@@ -1,0 +1,25 @@
+func intRandom2DArray(row: Int, col: Int) -> [[Int]] {
+    var intArray = [[Int]]()
+    for _ in 0..<row {
+        var tempArray = [Int]()
+        for _ in 0..<col {
+            tempArray.append(Int.random(in: 0..<100))
+        }
+        intArray.append(tempArray)
+    }
+    return intArray
+}
+
+func int2DArrayToString(intArray: [[Int]]) -> String {
+    var finalString: String = ""
+    for i in 0..<intArray.count {
+        for j in 0..<intArray[0].count {
+            finalString += " " + String(intArray[i][j])
+        }
+    }
+    return finalString
+}
+
+var array: [[Int]] = intRandom2DArray(row: 3, col: 5)
+print(array)
+print(int2DArrayToString(intArray: array))

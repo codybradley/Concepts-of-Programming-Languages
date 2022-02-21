@@ -1,0 +1,13 @@
+func ordered2DArray(row: Int, col: Int) -> [[Int]] {
+    var intArray = [[Int]]()
+    for i in 0..<row {
+        var tempArray = [Int]()
+        for j in 0..<col {
+            tempArray.append(i*col+j)
+        }
+        intArray.append(tempArray)
+    }
+    return intArray
+}
+
+print(ordered2DArray(row: 3, col: 5))

@@ -1,0 +1,15 @@
+%Facts & Rules
+sumList([],0).
+sumList([H|T], S) :-
+    sumList(T, S1),
+    S is S1 + H.
+
+avgEachList([],[]).
+avgEachList([HeadList|Rest], [Avg|AvgRest]) :-
+    sumList(HeadList,S),
+    length(HeadList,Len),
+    avgEachList(Rest, AvgRest),
+    Avg is S / Len.
+
+%Queries
+avgEachList([[1,2,3],[0,0,0],[10,9,8,11]],A1).

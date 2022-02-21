@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+)
+
+func ordered2DArray(row, col int) [][]int {
+	intArray := make([][]int, row)
+	for i := 0; i<row; i++ {
+		intArray[i] = make([]int, col)
+	}
+	
+	for i := 0; i<row; i++ {
+		for j := 0; j<col; j++ {
+			intArray[i][j] = i*col+j
+		}
+	}
+	return intArray
+}
+
+func main() {
+	fmt.Println(ordered2DArray(3, 5))
+}

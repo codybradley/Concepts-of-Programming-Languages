@@ -1,0 +1,33 @@
+program Project1;
+
+type IntegerArray = array of integer;
+var exArray: IntegerArray;
+    
+function orderedArray(size: integer): IntegerArray;
+var i: integer;
+begin
+    SetLength(orderedArray, size);
+    for i := 0 to size-1 do orderedArray[i] := i;
+end;
+
+procedure outputArray(input: IntegerArray);
+var i: integer;
+begin
+    for i := 0 to Length(input)-1 do
+        write(' ', input[i]);
+    writeln();
+end;
+
+function sumArray(input: IntegerArray): integer;
+var i: integer;
+begin
+    sumArray := 0;
+    for i := 0 to Length(input)-1 do
+        sumArray += input[i];
+end;
+
+begin
+    exArray := orderedArray(5);
+    outputArray(exArray);
+    writeln(sumArray(exArray));
+end.

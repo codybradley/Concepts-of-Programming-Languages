@@ -1,0 +1,10 @@
+%Rules
+sum43(1, 43).
+sum43(N, S) :-
+    N>1,
+    N1 is N-1,
+    sum43(N1, S1),
+    S is (N*43) + S1.
+
+%Query
+sum43(4, X).

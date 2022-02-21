@@ -1,0 +1,9 @@
+func orderedArray(size: Int) -> [Int] {
+    var intArray = [Int]()
+    for i in 0..<size {
+        intArray.append(i)
+    }
+    return intArray
+}
+
+print(orderedArray(size: 10))

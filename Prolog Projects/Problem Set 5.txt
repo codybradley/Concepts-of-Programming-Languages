@@ -1,0 +1,9 @@
+//PROGRAM
+sumList(List, Result) :- h_sumList(List, 0, Result).
+h_sumList([], Acc, Acc).
+h_sumList([H|T], Acc, Result) :-
+    NewAcc is Acc + H,
+    h_sumList(T, NewAcc, Result).
+
+//QUERIES
+sumList([1,2,3,4,5,6], S).

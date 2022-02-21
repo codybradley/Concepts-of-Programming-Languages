@@ -1,0 +1,25 @@
+//  http://learnyouahaskell.com/chapters
+
+
+
+
+question1 l = sum l
+
+question2a n =
+    if n == 1
+        then [0]
+        else 0:question2a (n-1)
+        
+question2b n
+    | n == 1 = [0]
+    | otherwise = 0:question2b(n-1)
+    
+question2c n = take n (repeat 0)
+
+question3 f l = map f l
+
+squarenum x = x*x
+
+question4 x y = sum [x..y]
+
+main = print(question3 squarenum [1..10])

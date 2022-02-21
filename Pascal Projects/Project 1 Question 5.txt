@@ -1,0 +1,11 @@
+program Project1(input);
+    
+function promptForInput(msg: string): string;
+begin
+    readLn(promptForInput);
+end;
+
+
+begin
+    writeln(promptForInput('Type your name: '))
+end.

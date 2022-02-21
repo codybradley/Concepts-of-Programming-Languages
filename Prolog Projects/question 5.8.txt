@@ -1,0 +1,8 @@
+//RULES
+pswap([],[]).
+pswap([H|[]],[H]).
+pswap([H1,H2|T1], [H2,H1|T2]):-
+    pswap(T1,T2).
+
+//QUERY
+trace, pswap([1,2,3,4,6], X).

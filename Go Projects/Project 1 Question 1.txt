@@ -1,0 +1,6 @@
+package main
+import "fmt"
+
+func printString(input string) {
+    fmt.Print(input)
+}
